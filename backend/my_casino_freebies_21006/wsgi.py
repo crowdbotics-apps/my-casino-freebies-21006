@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'my_casino_freebies_21006.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_casino_freebies_21006.settings")
 
 application = get_wsgi_application()
