@@ -11,18 +11,30 @@ class User(AbstractUser):
         blank=True,
         max_length=255,
     )
+    first_name = models.CharField(
+        null=True,
+        blank=True,
+        max_length=255,
+    )
+    last_name = models.CharField(
+        null=True,
+        blank=True,
+        max_length=255,
+    )
     email = models.EmailField(
         null=True,
         blank=True,
-        max_length=254,
+        max_length=255,
     )
-    last_name = models.TextField(
+    timestamp_created = models.DateTimeField(
         null=True,
         blank=True,
+        auto_now_add=True,
     )
-    first_name = models.TextField(
+    last_updated = models.DateTimeField(
         null=True,
         blank=True,
+        auto_now=True,
     )
 
     def get_absolute_url(self):
